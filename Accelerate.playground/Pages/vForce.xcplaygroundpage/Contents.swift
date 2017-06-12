@@ -14,9 +14,10 @@ var aAbsolute = floats(count)
 vvfabsf( &aAbsolute, &a, &count )
 
 aAbsolute
-//:### Lessons:
-//: * The docs have the arguments in the wrong order! Always check.
-//: * "count" needs to be Int32, not just Int
+//:## Lessons:
+//:### » The argument order is y, x, n (unlabeled in docs)
+//:###
+//:### » "count" needs to be Int32, not just Int
 
 //:## Example: Integers from Floats
 count = 3
@@ -76,4 +77,3 @@ rampCos.map { $0 }
 
 //:### Lesson:
 //: * The input values are off by a factor of π from the other function!
-//:   (Not mentioned in the docs)

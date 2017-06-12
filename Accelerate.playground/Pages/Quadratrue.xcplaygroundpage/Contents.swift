@@ -1,7 +1,6 @@
 //: [Previous](@previous) | [Next](@next)
 //:# Quadrature
 //:## Fast Integrals
-//:### Note: None of this code will look like either Swift or Objective-C. Documentation is almost non-existent.
 import Accelerate
 
 func myFunction(arg: ImplicitlyUnwrappedOptional<UnsafeMutableRawPointer>, n: Int, x: UnsafePointer<Double>, y: UnsafeMutablePointer<Double>) {

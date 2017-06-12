@@ -22,7 +22,8 @@ cblas_caxpy( 2, &a, &x, 1, &y, 1 )
 //:### And, as is common in BLAS, the answer is returned in the y vector (destroynig what was there!)
 y          // = [ 11 + 18i, 27 + 44i ]
 
-//:## Make a nice complex struct
+//:## For fun, let's make a nice complex struct
+//:### Because Swift will lay out the memory of the following struct as two adjascent Floats in memory, this will directly work with BLAS functions.
 struct Complex {
 	var real: Float
 	var imag: Float
@@ -52,8 +53,8 @@ cblas_caxpy( 2, &a, &c, 1, &d, 1 )
 d[0].description
 d[1].description
 
-//:## And using the convenience operators:
-//:### note: "¡" is typable and cannot get confused with "i" by Xcode
+//:## More fun: Using a convenience operator, ¡
+//:### note: "¡" is typable (option-1) and cannot get confused with "i" by Xcode, which will provide you proper errors and type checking
 postfix operator ¡
 
 extension Complex {
